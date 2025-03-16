@@ -45,6 +45,7 @@ classDiagram
 
 ```
 
+
 ## Patrón Builder - Añadir accesorios a las armas
 
 ```mermaid
@@ -104,4 +105,43 @@ classDiagram
     
     IWeaponAttachmentsBuilder <|.. WeaponAttachmentsBuilder
     WeaponAttachmentsBuilder --> WeaponAttachments
-    ```
+
+```
+
+
+## Patrón Singleton - Administrador de partida privada
+
+```mermaid
+    %% Clase con el Singleton
+    class GameManager {
+        - instance: GameManager
+        - players: List~Player~
+        - gameStarted: boolean
+        - GameManager()
+        + getInstance() : GameManager
+        + addPlayer(player: Player)
+        + removePlayer(player: Player)
+        + startGame()
+        + endGame()
+        - resetInstance()
+    }
+
+    %% Clase que se va usar para el ejemplo
+    class Player {
+        - name: String
+        - id: String
+        + Player(name: String, id: String)
+        + getName() : String
+        + getId() : String
+    }
+
+    
+        class Client{
+        
+        }
+        
+    
+        Client --> GameManager
+        GameManager "1" -- "n" Player
+
+```
