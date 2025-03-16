@@ -112,6 +112,7 @@ classDiagram
 ## Patrón Singleton - Administrador de partida privada
 
 ```mermaid
+classDiagram
     %% Clase con el Singleton
     class GameManager {
         - instance: GameManager
