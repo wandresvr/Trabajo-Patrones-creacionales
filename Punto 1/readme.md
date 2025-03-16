@@ -1,6 +1,6 @@
 # Diagramas UML
 
-## Prototype - 
+## Patrón Prototype - Lanzamiento de escenarios o mapas al servidor:
 
 ```mermaid
 classDiagram
@@ -44,3 +44,64 @@ classDiagram
     GameScenario <|-- ChrismasScenario
 
 ```
+
+## Patrón Builder - Añadir accesorios a las armas
+
+```mermaid
+classDiagram
+    %% La clase producto que contiene lo que el builder construya
+    class WeaponAttachments {
+        - sight: String
+        - barrel: String
+        - stock: String
+        - grip: String
+        - ammo: String
+        + WeaponAttachments(sight: String, barrel: String, stock: String, grip: String, ammo: String)
+        + getSight() : String
+        + setSight(sight: String)
+        + getBarrel() : String
+        + setBarrel(barrel: String)
+        + getStock() : String
+        + setStock(stock: String)
+        + getGrip() : String
+        + setGrip(grip: String)
+        + getAmmo() : String
+        + setAmmo(ammo: String)
+        + showLoadout() : void
+    }
+
+    %% Interfaz para la construcción de los accesorios del arma (Builder)
+    class IWeaponAttachmentsBuilder {
+        <<interface>>
+        + setSight(sight: String) : IWeaponAttachmentsBuilder
+        + setBarrel(barrel: String) : IWeaponAttachmentsBuilder
+        + setStock(stock: String) : IWeaponAttachmentsBuilder
+        + setGrip(grip: String) : IWeaponAttachmentsBuilder
+        + setAmmo(ammo: String) : IWeaponAttachmentsBuilder
+        + build() : WeaponAttachments
+    }
+
+    
+    %% Implementación concreta del Builder de los accesorios del arma
+    class WeaponAttachmentsBuilder {
+        - sight: String = "Sight stock"
+        - barrel: String = "Barrel stock"
+        - stock: String = "Basic"
+        - grip: String = "No grip"
+        - ammo: String = "Standar"
+        + setSight(sight: String) : IWeaponAttachmentsBuilder
+        + setBarrel(barrel: String) : IWeaponAttachmentsBuilder
+        + setStock(stock: String) : IWeaponAttachmentsBuilder
+        + setGrip(grip: String) : IWeaponAttachmentsBuilder
+        + setAmmo(ammo: String) : IWeaponAttachmentsBuilder
+        + build() : WeaponAttachments
+    }
+    
+    class Client{
+    }
+    
+    Client ..>  IWeaponAttachmentsBuilder
+    
+    IWeaponAttachmentsBuilder <|.. WeaponAttachmentsBuilder
+    WeaponAttachmentsBuilder --> WeaponAttachments
+    ```
