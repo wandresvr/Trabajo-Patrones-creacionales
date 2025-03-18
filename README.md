@@ -20,6 +20,6 @@ Este trabajo está constituido de la siguiente manera:
 ```
 <br>
 
-- La explicación del notebook decada punto esta realizada sobre Jupyter en la que se explica la utilización de los patrones creacionales.
+- La explicación del notebook de cada punto esta realizada sobre Jupyter en la que se explica la utilización de los patrones creacionales.
 - El readme de cada punto contiene el diagrama UML usando mermaid.
 - El código fuente se encuentra según el lenguaje usado.
