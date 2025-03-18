@@ -25,12 +25,6 @@ classDiagram
       + CreateDocumentFile(filename: String)
     }
 
-    %% Interfaz para clonar el documento
-    class IPrototype {
-        <<interface>>
-        + Clone() : IPrototype
-    }
-
     %% Clase abstracta documento
     class DocumentFile {
     <<abstract>>
@@ -43,12 +37,6 @@ classDiagram
       + SetTitle(title: String) : void
       + RetrieveContent() : String
       + Clone() : IPrototype
-    }
-
-    %% clase documento PDF
-    class PDFDocumentFile {
-      + RetrieveContent() : String
-      + GeneratePdf() : PDFDocumentFile
     }
 
     %% Implementación documento concreto Word
