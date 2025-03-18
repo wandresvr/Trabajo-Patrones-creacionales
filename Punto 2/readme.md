@@ -82,13 +82,31 @@ classDiagram
     DocumentFileFactory <|-- XLSXDocumentFactory
     DocumentFileFactory <|-- XMLDocumentFactory
 
-    IPrototype <|.. DocumentFile
     DocumentFile <|-- DOCXDocumentFile
     DocumentFile <|-- XLSXDocumentFile
     DocumentFile <|-- XMLDocumentFile
 
 ```
 
+## Patrón Prototype
+
+```mermaid
+classDiagram
+    %% Interfaz para clonar el documento
+    class IPrototype {
+        <<interface>>
+        + Clone() : IPrototype
+    }
+
+    %% clase documento PDF
+    class PDFDocumentFile {
+      + RetrieveContent() : String
+      + GeneratePdf() : PDFDocumentFile
+    }
+
+    IPrototype <|.. PDFDocumentFile
+
+```
 
 ## Patrón Builder
 
