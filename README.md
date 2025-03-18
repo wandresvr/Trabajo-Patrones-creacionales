@@ -3,9 +3,12 @@
 ### Integrantes: 
  #### - Wilson Andrés Vargas Rojas
  #### - Yeison Fabian Suarez Alba 
-
+<br>
 Este trabajo está constituido de la siguiente manera:
+<br>
+<br>
 
+```plaintext
 │── Punto 1 (Java)
 │   ├── Explicación del código en un notebook
 │   ├── Readme con diagramas UML
@@ -14,7 +17,9 @@ Este trabajo está constituido de la siguiente manera:
 │   ├── Explicación del código en un notebook
 │   ├── Readme con diagramas UML
 │   ├── Código fuente
+```
+<br>
 
-La explicación del notebook decada punto esta realizada sobre Jupyter en la que se explica la utilización de los patrones creacionales.
-El readme de cada punto contiene el diagrama UML usando mermaid.
-El código fuente se encuentra según el lenguaje usado.
+- La explicación del notebook decada punto esta realizada sobre Jupyter en la que se explica la utilización de los patrones creacionales.
+- El readme de cada punto contiene el diagrama UML usando mermaid.
+- El código fuente se encuentra según el lenguaje usado.
