@@ -1,6 +1,6 @@
 # Diagramas UML
 
-## Patrón Factory Method y Prototype
+## Patrón Factory
 
 ```mermaid
 classDiagram
@@ -65,6 +65,8 @@ classDiagram
       + RetrieveContent() : String
       + Clone() : IPrototype
     }
+
+    DocumentFileFactory ..> DocumentFile
 
     DocumentFileFactory <|-- DOCXDocumentFactory
     DocumentFileFactory <|-- XLSXDocumentFactory
